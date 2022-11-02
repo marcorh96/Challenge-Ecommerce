@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/base/reset.css">
+    <link rel="stylesheet" href="../assets/css/header/header.css">
+    <link rel="stylesheet" href="../assets/css/footer/footer.css">
+    <link rel="stylesheet" href="../assets/css/header/logo.css">
+    <link rel="stylesheet" href="../assets/css/header/search.css">
+    <link rel="stylesheet" href="../assets/css/header/login.css">
+    <link rel="stylesheet" href="../assets/css/login/login.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><span class="logo__text">ProjazStyle</span></a>
+                <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon top-bar"></span>
+                    <span class="toggler-icon middle-bar"></span>
+                    <span class="toggler-icon bottom-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="nav__list ms-auto navbar-nav text-center">
+                        <li class="nav__item"><a href="../index.html" class="nav__link active">Inicio</a></li>
+                        <li class="nav__item"><a href="../views/login.html" class="nav__link">Login</a></li>
+                        <li class="nav__item">
+                            <div class="nav__link search">
+                                <input placeholder="Ingrese su busqueda" class="search__input" />
+                                <i class='bx bx-search'></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="login">
+            <div class="login__container">
+                <input placeholder="Username" type="text" class="input login__space" required data-username>
+                <input placeholder="Password" type="password" class="input login__space" required data-password>
+                <button type="submit" id="btnLogin" class="btn btn-outline-dark login__space">Login</button>
+                <button type="button" class="btn btn-outline-dark login__space" onclick=" window.location.href='./register.html'">Signup</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="contact">
+            <div class="contact__links">
+                <p>Acerca de nosotros</p>
+                <ul class="ul__contact">
+                    <li><a href="#" class="contact__link">Quienes Somos</a></li>
+                    <li><a href="#" class="contact__link">Politica de Privacidad</a></li>
+                    <li><a href="#" class="contact__link">Nuestras Tiendas</a></li>
+                </ul>
+            </div>
+            <div class="contact__form">
+                <p>Contacto</p>
+                <form>
+                    <input placeholder="Nombre" type="text" class="input__footer login__space flex__space" required>
+                    <textarea placeholder="Comentarios" type="text" class="input__footer form__textarea login__space flex__space" required></textarea>
+                    <button type="submit" class="btn btn-light login__space flex__space">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer_container">
+            <h1>&copyCopyright Created by <a href="https://github.com/marcorh96" class="ref">MarcoRh96</a></h1>
+            <p>All rights reserved.</p>
+            <div>
+                <a href="https://www.linkedin.com/in/marco-antonio-ias"><i class='bx bxl-linkedin-square icono'></i></a>
+                <a href="https://github.com/marcorh96"><i class='bx bxl-github icono'></i></a>
+                <a href="#"><i class='bx bxl-gmail icono'></i></a>
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="../assets/js/controllers/login/login.js" type="module"></script>
+
+</body>
+
+</html>

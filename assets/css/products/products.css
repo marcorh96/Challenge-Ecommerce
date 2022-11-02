@@ -1,0 +1,67 @@
+.container__products{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    justify-items: center;
+    grid-column-end: 4;
+}
+.shoes__product, .shirt__product, .short__product, .hat__product{
+    width: 90%;
+    border: 5px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit: fill;
+}
+.shoes__img, .shirt__img, .short__img, .hat__img{
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+}
+.title__products{
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem;
+}
+@media screen and (max-width: 991px) {
+    .container__products{
+        grid-template-columns: auto auto auto auto;
+    }
+    .shoes__product:nth-of-type(5),.shoes__product:nth-of-type(6){
+        display: none;
+    }
+    .shirt__product:nth-of-type(5),.shirt__product:nth-of-type(6){
+        display: none;
+    }
+    .short__product:nth-of-type(5),.short__product:nth-of-type(6){
+        display: none;
+    }
+    .hat__product:nth-of-type(5),.hat__product:nth-of-type(6){
+        display: none;
+    }
+    .shoes__img, .shirt__img, .short__img, .hat__img{
+        height: 17vw;
+    }
+}
+@media screen and (max-width: 480px) {
+    .container__products{
+        grid-template-columns: auto auto;
+    }
+    .shoes__product:nth-of-type(3),.shoes__product:nth-of-type(4),.shoes__product:nth-of-type(5),.shoes__product:nth-of-type(6){
+        display: none;
+    }
+    .shirt__product:nth-of-type(3),.shirt__product:nth-of-type(4),.shirt__product:nth-of-type(5),.shirt__product:nth-of-type(6){
+        display: none;
+    }
+    .short__product:nth-of-type(3),.short__product:nth-of-type(4),.short__product:nth-of-type(5),.short__product:nth-of-type(6){
+        display: none;
+    }
+    .hat__product:nth-of-type(3),.hat__product:nth-of-type(4),.hat__product:nth-of-type(5),.hat__product:nth-of-type(6){
+        display: none;
+    }
+    .shoes__img, .shirt__img, .short__img, .hat__img{
+        height: 30vw;
+    }
+
+}

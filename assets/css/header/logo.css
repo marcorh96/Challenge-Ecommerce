@@ -1,0 +1,6 @@
+.logo__text{
+    font-size:calc(22px + .5vw);
+    font-style: italic;
+    color: white;
+    text-decoration: none;
+}

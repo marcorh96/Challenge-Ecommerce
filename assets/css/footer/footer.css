@@ -1,0 +1,130 @@
+footer {
+    padding: 6.15rem;
+    background: black;
+    margin-top: 2rem;
+}
+
+/* From uiverse.io by @alexruix */
+.input__footer {
+    width: 25vw;
+    line-height: 28px;
+    border: 2px solid transparent;
+    border-bottom-color: #777;
+    padding: .2rem 0;
+    outline: none;
+    background-color: #e8e8e8;
+    color: #0d0c22;
+    transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.form__textarea {
+    height: 20vh;
+    resize: none;
+}
+
+.input__footer:focus,
+.input__footer:hover {
+    outline: none;
+    padding: .2rem 1rem;
+    border-radius: 1rem;
+    border-color: #7a9cc6;
+}
+
+.input__footer::placeholder {
+    color: #777;
+}
+
+.input__footer:focus::placeholder {
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+/**/
+
+
+.contact {
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+
+}
+
+.ul__contact {
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0%;
+}
+
+.contact__links {}
+
+.contact__links p {
+    color: white;
+    font-size: 2rem;
+}
+
+.contact__link {
+    color: white;
+    text-decoration: none;
+}
+
+.contact__form p {
+    font-size: 2rem;
+    color: white;
+}
+
+.contact__form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer_container {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.flex__space {
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 1280px) {
+    footer {
+        padding: 1.85rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .input__footer {
+        width: 35vw;
+    }
+
+    .contact {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        padding: 2rem;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .input__footer {
+        width: 80vw;
+    }
+
+    .contact__links {
+        padding: 2rem 0;
+    }
+}
