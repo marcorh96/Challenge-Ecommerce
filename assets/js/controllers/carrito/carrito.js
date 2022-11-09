@@ -17,7 +17,7 @@ let price = 0;
  });
  */
 
-console.log(localStorage.getItem("products-cart"));
+//console.log(localStorage.getItem("products-cart"));
 if (localStorage.getItem("user") == null || localStorage.getItem("user") == undefined) alert("Necesitas iniciar sesión!"), window.location.href = './login.html';
 
 

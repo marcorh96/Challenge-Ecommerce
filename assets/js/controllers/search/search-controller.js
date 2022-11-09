@@ -19,7 +19,6 @@ const getData = async() =>{
 }
 
 const productData = await getData();
-console.log(productData);
 productData.forEach(product => {
     const productTitle = product.title.toLowerCase();
     const productCategory = product.category.name.toLowerCase();
@@ -28,7 +27,8 @@ productData.forEach(product => {
     }
     if(productCategory.indexOf(prodSearch) >= 0){
         arrayCategory.push(product);
-    }  
+    }
+    
 });
 
 const generateProducts = () =>{
@@ -57,6 +57,10 @@ const generateProducts = () =>{
             containerImages = "";
             generarProductos(filtroId, filtroImagen, filtroTitulo, filtroPrecio);
         }
+    }
+    if(arrayTitle.length == 0 && arrayCategory.length == 0){
+        const h3 = '<h3 class="h3__notfound">No se encontró ningun resultado</h3>';
+        productsContainer.innerHTML = h3;
     }
         
 };
