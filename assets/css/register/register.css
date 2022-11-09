@@ -17,3 +17,8 @@
 .input-message-error{
     color: red;
 }
+@media screen and (max-width: 480px) {
+    .input__birth{
+        width: 50vw;
+    }
+}

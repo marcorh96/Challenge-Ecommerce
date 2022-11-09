@@ -19,7 +19,7 @@ form.addEventListener('submit', (event) => {
         .createUser(userData.username, userData.password, userData.direction, userData.phone, userData.email, userData.birth, userData.id, userData.status)
         .then(() => {
             console.log(userData.username, userData.password, userData.direction, userData.phone, userData.email, userData.birth, userData.id, userData.status)
-            window.location.href = "/Challenge_Ecommerce/views/register__complete.html";
+            window.location.href = "./register__complete.html";
         })
         .catch((err) =>console.log(err))
 });

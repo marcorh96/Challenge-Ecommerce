@@ -34,15 +34,7 @@
                     <span class="toggler-icon bottom-bar"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <ul class="nav__list ms-auto navbar-nav text-center">
-                        <li class="nav__item"><a href="../index.html" class="nav__link active">Inicio</a></li>
-                        <li class="nav__item"><a href="../views/login.html" class="nav__link">Login</a></li>
-                        <li class="nav__item">
-                            <div class="nav__link search">
-                                <input placeholder="Ingrese su busqueda" class="search__input" />
-                                <i class='bx bx-search'></i>
-                            </div>
-                        </li>
+                    <ul class="nav__list ms-auto navbar-nav text-center" id="ulNavBar">
                     </ul>
                 </div>
             </div>
@@ -50,103 +42,8 @@
     </header>
     <main>
         <section class="detail">
-            <div class="detail__product">
-                <img class="detail__img" src="../assets/img/nikeshoe.jpg">
-                <div class="detail__description">
-                    <h1>Nike Retro 1</h1>
-                    <h2>$60.00</h2>
-                    <p>El modelo Nike Air Jordan 1 Retro High es una reedición que hace referencia a la versión original
-                        del Air Jordan 1. En esta silueta destaca la
-                        amortiguación reactiva y materiales premium por los que se dieron a conocer la prestigiosa
-                        zapatillas del jugador de la NBA, Michael Jordan. En esta silueta
-                        la firma americana ha querido mantener
-                        el estilo sencillo y sobrio por el que destacaban las zapatillas
-                        de basket que lucían los profesionales de la NBA sobre la década de los 80. </p>
-                    <button type="button" class="btn btn-outline-dark login__space">Añadir al Carrito</button>
-                </div>
-            </div>
-        </section>
-        <section class="shirts">
-            <p class="title__products">Projaz T-shirts</p>
-            <div class="container__products">
-                <div class="shirt__product">
-                    <img class="shirt__img" src="../assets/img/projaz-shirt.jpg">
-                    <h2>Shirt Blanca</h2>
-                    <strong>$60.00</strong>
-                    <p><a href="../views/detail.html">Ver producto</a></p>
-                </div>
-                <div class="shirt__product">
-                    <img class="shirt__img" src="../assets/img/projaz-shirt.jpg">
-                    <h2>Shirt Blanca</h2>
-                    <strong>$60.00</strong>
-                    <p><a href="../views/detail.html">Ver producto</a></p>
-                </div>
-                <div class="shirt__product">
-                    <img class="shirt__img" src="../assets/img/projaz-shirt.jpg">
-                    <h2>Shirt Blanca</h2>
-                    <strong>$60.00</strong>
-                    <p><a href="../views/detail.html">Ver producto</a></p>
-                </div>
-                <div class="shirt__product">
-                    <img class="shirt__img" src="../assets/img/projaz-shirt.jpg">
-                    <h2>Shirt Blanca</h2>
-                    <strong>$60.00</strong>
-                    <p><a href="../views/detail.html">Ver producto</a></p>
-                </div>
-                <div class="shirt__product">
-                    <img class="shirt__img" src="../assets/img/projaz-shirt.jpg">
-                    <h2>Shirt Blanca</h2>
-                    <strong>$60.00</strong>
-                    <p><a href="../views/detail.html">Ver producto</a></p>
-                </div>
-                <div class="shirt__product">
-                    <img class="shirt__img" src="../assets/img/projaz-shirt.jpg">
-                    <h2>Shirt Blanca</h2>
-                    <strong>$60.00</strong>
-                    <p><a href="../views/detail.html">Ver producto</a></p>
-                </div>
-            </div>
-        </section>
-
-        <section class="shorts">
-            <p class="title__products">Projaz Shorts</p>
-            <div class="container__products">
-                <div class="short__product">
-                    <img class="short__img" src="../assets/img/projaz-shorts.jpg">
-                    <h2>Short</h2>
-                    <strong>$60.00</strong>
-                    <p><a href="../views/detail.html">Ver producto</a></p>
-                </div>
-                <div class="short__product">
-                    <img class="short__img" src="../assets/img/projaz-shorts.jpg">
-                    <h2>Short</h2>
-                    <strong>$60.00</strong>
-                    <p><a href="../views/detail.html">Ver producto</a></p>
-                </div>
-                <div class="short__product">
-                    <img class="short__img" src="../assets/img/projaz-shorts.jpg">
-                    <h2>Short</h2>
-                    <strong>$60.00</strong>
-                    <p><a href="../views/detail.html">Ver producto</a></p>
-                </div>
-                <div class="short__product">
-                    <img class="short__img" src="../assets/img/projaz-shorts.jpg">
-                    <h2>Short</h2>
-                    <strong>$60.00</strong>
-                    <p><a href="../views/detail.html">Ver producto</a></p>
-                </div>
-                <div class="short__product">
-                    <img class="short__img" src="../assets/img/projaz-shorts.jpg">
-                    <h2>Short</h2>
-                    <strong>$60.00</strong>
-                    <p><a href="../views/detail.html">Ver producto</a></p>
-                </div>
-                <div class="short__product">
-                    <img class="short__img" src="../assets/img/projaz-shorts.jpg">
-                    <h2>Short</h2>
-                    <strong>$60.00</strong>
-                    <p><a href="../views/detail.html">Ver producto</a></p>
-                </div>
+            <div class="detail__product" id="detailProduct">
+            
             </div>
         </section>
 
@@ -184,6 +81,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <script src="../assets/js/controllers/products/products-update.js" type="module"></script>
+    <script src="../assets/js/controllers/products/product-to-cart.js" type="module"></script>
     <script src="../assets/js/header.js"></script>
 </body>
 

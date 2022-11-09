@@ -14,7 +14,7 @@
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: red;
     font-size: 2rem;
     font-family: cursive;
     justify-content: center;
@@ -25,7 +25,7 @@
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: red;
     font-size: 2rem;
     font-family: cursive;
     justify-content: center;
@@ -45,13 +45,13 @@
 }
 @media screen and (max-width: 480px) {
     .fondo__description{
-        font-size: 1.5rem;
+        font-size: 2rem;
         left: 55%;
     }
     .fondo__descuento{
-        font-size: 1rem;
-        top: 45%;
-        left: 50%;
+        font-size: 1.3rem;
+        top: 50%;
+        left: 55%;
     }
 }
 @media screen and (max-width: 320px) {
