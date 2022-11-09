@@ -10,9 +10,9 @@ productsServices.products().then((data) => {
         r[a.category.name].push(a);
         return r;
     }, Object.create(null));
-    const formatResult = Object.entries(resultado).splice(2);
-    console.log(formatResult);
-    for (const [categoria, array] of formatResult) {
+   
+    
+    for (const [categoria, array] of Object.entries(resultado)) {
         const filtroCategoria = array.filter(product => product.category.name.includes(categoria));
         loopProductos(filtroCategoria);
     }

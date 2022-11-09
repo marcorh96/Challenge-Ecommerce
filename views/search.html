@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="../assets/css/header/search.css">
     <link rel="stylesheet" href="../assets/css/header/login.css">
     <link rel="stylesheet" href="../assets/css/login/login.css">
-    <link rel="stylesheet" href="../assets/css/register/register.css">
+    <link rel="stylesheet" href="../assets/css/products/products.css">
+    <link rel="stylesheet" href="../assets/css/search/search.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <title>Register</title>
+    <title>Busqueda</title>
 </head>
-
 <body>
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -40,47 +40,38 @@
         </nav>
     </header>
     <main>
-        <section class="register">
-            <form class="form__register">
-                <div class="input-container">
-                    <input placeholder="Username" type="text" id="username" class="input login__space" required
-                        data-tipo="nombre">
-                    <div>
-                        <span class="input-message-error"></span>
+        <section class="search__container" id="products">
+             <!-- <p class="title__products">Projaz Shoes</p>
+            <div class="container__products">
+                <div class="projaz__product">
+                    <div id="myCarousel1" class="carousel slide" data-bs-ride="carouse1">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active ">
+                                <img src="../assets/img/nikeshoe.jpg" class="d-block w-100 product__img" alt="product">
+                            </div>
+                            <div class="carousel-item ">
+                                <img src="../assets/img/nikeshoe.jpg" class="d-block w-100 product__img" alt="product">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../assets/img/nikeshoe.jpg" class="d-block w-100 product__img" alt="product">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
-                </div>
-                <div class="input-container">
-                    <input placeholder="Password" id="password" type="password" class="input login__space" required
-                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$"
-                        title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales."
-                        data-tipo="password">
-                        <span class="input-message-error"></span>
-
-                </div>
-                <div class="input-container">
-                    <input placeholder="Direction" id="direction" type="text" class="input login__space" required
-                        pattern="[\s\S]{10,60}" data-tipo="direccion">
-                    <span class="input-message-error"></span>
-                </div>
-                <div class="input-container">
-                    <input placeholder="Phone" type="tel" id="phone" class="input login__space" required
-                        pattern="\d{10}" minlength="10" required maxlength="10" data-tipo="numero">
-                    <span class="input-message-error"></span>
-                </div>
-                <div class="input-container">
-                    <input placeholder="Email" type="email" id="email" class="input login__space" required
-                        data-tipo="email">
-                    <span class="input-message-error"></span>
-                </div>
-                <div class="input-container">
-                    <input name="birth" id="birth" class="input login__space input__birth" type="date"
-                     placeholder="yyyy-mm-dd" required data-tipo="nacimiento">
-                    <span class="input-message-error"></span>
-                </div>
-
-                <button type="submit" class="btn btn-outline-dark login__space" data-register>Registrarse</button>
-            </form>
-        </section>
+                    <h2>Nike Retro 1</h2>
+                    <strong>$60.00</strong>
+                    <p><a href="./views/detail.html">Ver producto</a></p>
+                </div>          -->    
+        
     </main>
     <footer>
         <div class="contact">
@@ -110,18 +101,12 @@
                 <a href="https://github.com/marcorh96"><i class='bx bxl-github icono'></i></a>
                 <a href="#"><i class='bx bxl-gmail icono'></i></a>
             </div>
-
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <script src="../assets/js/header.js"></script>
-    <script src="../assets/js/controllers/register/register-validation.js" type="module"></script>
-    <script src="../assets/js/controllers/register/register-login.js" type="module"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
-        integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../assets/js/controllers/search/search-controller.js" type="module"></script>
 </body>
-
 </html>

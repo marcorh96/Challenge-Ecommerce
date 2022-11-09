@@ -21,13 +21,18 @@ console.log(localStorage.getItem("products-cart"));
 if (localStorage.getItem("user") == null || localStorage.getItem("user") == undefined) alert("Necesitas iniciar sesión!"), window.location.href = './login.html';
 
 
-
+const dosDecimales = (n) =>{
+    let t=n.toString();
+    let regex=/(\d*.\d{0,2})/;
+    return t.match(regex)[0];
+}
 
 const generateTotal = () => {
     const descuento = price * .10;
     const total = price - descuento;
-    const totalContainer = `<h2>Total: $ ${total}</h2>
-    <h3>Usted ahorrara $ ${descuento}</h3>`;
+    
+    const totalContainer = `<h2>Total: $ ${dosDecimales(total)}</h2>
+    <h3>Usted ahorrara $ ${dosDecimales(descuento)}</h3>`;
     priceContainer.innerHTML = totalContainer;
     priceContainer.appendChild(btnPurchase);
    
@@ -73,6 +78,7 @@ btnPurchase.addEventListener('click', () => {
     localStorage.setItem("products-cart", JSON.stringify(productsCart));
     location.reload();
 });
+
 
 /* <li class="carrito__product">
     <img src="../assets/img/nikeshoe.jpg" class="img__product">

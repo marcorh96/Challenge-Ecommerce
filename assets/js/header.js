@@ -10,9 +10,9 @@ const input = document.createElement('input');
 input.classList.add('search__input');
 input.placeholder = "Ingrese su busqueda";
 div.appendChild(input);
-const i = document.createElement('i');
-i.classList.add('bx', 'bx-search');
-div.appendChild(i);
+const iSearch = document.createElement('i');
+iSearch.classList.add('bx', 'bx-search');
+div.appendChild(iSearch);
 //
 
 //Creo li cerrar sesión
@@ -25,8 +25,8 @@ aLogOut.textContent = "Cerrar Sesión";
 liLogOut.appendChild(aLogOut);
 //
 
-const loginNavList = () =>{
-        const navList = `<li class="nav__item"><a href="/index.html" class="nav__link active">Inicio</a></li>
+const loginNavList = () => {
+    const navList = `<li class="nav__item"><a href="/index.html" class="nav__link active">Inicio</a></li>
     <li class="nav__item"><a href="/views/login.html" class="nav__link">Login</a></li>
     </li>`;
     ulNavList.innerHTML = navList;
@@ -35,10 +35,10 @@ const loginNavList = () =>{
 
 
 
-const updateNavList = () =>{
+const updateNavList = () => {
     const userInfo = JSON.parse(localStorage.getItem('user'));
     const userStatus = userInfo.status;
-    if( userStatus == "online"){
+    if (userStatus == "online") {
         const navList = `<li class="nav__item"><a href="/index.html" class="nav__link active">Inicio</a></li>
         <li class="nav__item"><a href="/views/carrito.html" class="nav__link">Carrito</a></li>
         `;
@@ -50,13 +50,16 @@ const updateNavList = () =>{
     }
 };
 
-(localStorage.getItem("user") == null || localStorage.getItem("user") == undefined) ? loginNavList() : updateNavList(); 
+(localStorage.getItem("user") == null || localStorage.getItem("user") == undefined) ? loginNavList() : updateNavList();
 
-i.addEventListener('click', (event) =>{
-    console.log(event);
+iSearch.addEventListener('click', () => {
+    const inputValue = input.value.replace(/ /g, "-");
+    if (!(input.value == "" || input.value == null || input.value == undefined)) {
+        window.location.href = `/views/search.html?prodSearch=${inputValue.toLocaleLowerCase()}`;
+    } else alert("No puede dejar la búsqueda en blanco");
 });
 
-aLogOut.addEventListener('click', () =>{
+aLogOut.addEventListener('click', () => {
     localStorage.clear();
     location.reload();
     alert("Se ha cerrado sesión");
