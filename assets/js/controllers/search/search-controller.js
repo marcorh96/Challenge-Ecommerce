@@ -3,7 +3,7 @@ const productsContainer = document.getElementById('products');
 const div = document.createElement('div');
 div.classList.add('container__products');
 const url = new URL(window.location);
-const prodSearch = url.searchParams.get("prodSearch").replace(/-/g, " ");
+const prodSearch = url.searchParams.get("prodSearch").replace(/-/g, " ").trim();
 const arrayTitle = [];
 const arrayCategory = [];
 let containerImages;
