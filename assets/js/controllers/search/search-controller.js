@@ -9,13 +9,12 @@ const arrayCategory = [];
 let containerImages;
 
 const getData = async() =>{
-    let product;
     try {
-         product = await productsServices.products();
+         let product = await productsServices.products();
+         return product;
     } catch (error) {
         alert(error);
-    }
-    return product;
+    } 
 }
 
 const productData = await getData();
